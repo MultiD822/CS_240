@@ -35,6 +35,6 @@ Feel free to explore the code and provide feedback or suggestions.
 ## Resources
 
 
-
-Also if you are having a hard time with puzzles try doing a simpler puzzle that is more fun and silly. 
+## Personal Notes
+Also, if you are having a hard time with puzzles, try doing a simpler puzzle that is more fun and silly. 
   Then, come back to the hard puzzle, and you might find it easier to solve with fresh eyes. 
