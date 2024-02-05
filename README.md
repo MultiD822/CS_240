@@ -33,7 +33,7 @@ Feel free to explore the code and provide feedback or suggestions.
 
 
 ## Resources
-
+Will add resources when I have enough good ones  💽
 
 ## Personal Notes
 Also, if you are having a hard time with puzzles, try doing a simpler puzzle that is more fun and silly. 
