@@ -13,18 +13,18 @@
 - Compare and contrast sorting algorithms.
 
 ## Algorithms
-1. [Algorithm 1]: Binary Search, Time Complexity
-2. [Algorithm 2]: Insertion & Selection Sort
-3. [Algorithm 3]: Recursion vs Iteration
-4. [Algorithm 4]: Mergesort & Quicksort
-5. [Algorithm 5]: Hash functions
-6. [Algorithm 6]: Binary Trees - Search and Sort
+1. [Algorithm]: Binary Search, Time Complexity
+2. [Algorithm]: Insertion & Selection Sort
+3. [Algorithm]: Recursion vs Iteration
+4. [Algorithm]: Mergesort & Quicksort
+5. [Algorithm]: Hash functions
+6. [Algorithm]: Binary Trees - Search and Sort
 
 
 ## Data Structures
-1. [Data Structure 1]: Linked Lists
-2. [Data Structure 2]: Stacks and Queues
-3. [Data Structure 3]: Hash tables
+1. [Data Structure]: Linked Lists
+2. [Data Structure]: Stacks and Queues
+3. [Data Structure]: Hash tables
 
 
 ## Progress
