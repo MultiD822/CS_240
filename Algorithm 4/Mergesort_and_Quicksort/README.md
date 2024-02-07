@@ -5,10 +5,8 @@ through comments, comparing their time complexities in best, average, and worst-
 ## Details
 
 - Merge Sort Explanation:
-
-- Merge Sort in Programming Language:
 ```plaintext
- MergeSort(array)
+MergeSort(array)
   Call sortArray(array, 0, array.length - 1)
 
 sortArray(data, lowIndex, highIndex)
@@ -25,6 +23,10 @@ mergeArrays(arrayData, lowIndex, middleValue1, middleValue2, highIndex)
   If the left array is empty, copy the remaining elements from the right array
   If the right array is empty, copy the remaining elements from the left array
   Copy values back into the original array
+```
+- Merge Sort in Programming Language:
+```plaintext
+ 
 ```
 - Quick Sort Explanation:
 ```plaintext
