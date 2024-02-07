@@ -6,23 +6,23 @@ This assignment focuses on implementing and understanding two popular sorting al
 ### Merge Sort Explanation:
 
 ### Merge Sort in Programming Language:
- MergeSort(array)
-  Call sortArray(array, 0, array.length - 1)
+ MergeSort(array);
+  Call sortArray(array, 0, array.length - 1);
 
-sortArray(data, lowIndex, highIndex)
-  if highIndex - lowIndex >= 1
-    middleValue1 = (lowIndex + highIndex) / 2
-    middleValue2 = middleValue1 + 1
-    Call sortArray(data, lowIndex, middleValue1)
-    Call sortArray(data, middleValue2, highIndex)
-    Call mergeArrays(data, lowIndex, middleValue1, middleValue2, highIndex)
+sortArray(data, lowIndex, highIndex);
+  if highIndex - lowIndex >= 1;
+    middleValue1 = (lowIndex + highIndex) / 2;
+    middleValue2 = middleValue1 + 1;
+    Call sortArray(data, lowIndex, middleValue1);
+    Call sortArray(data, middleValue2, highIndex);
+    Call mergeArrays(data, lowIndex, middleValue1, middleValue2, highIndex);
 
-mergeArrays(arrayData, lowIndex, middleValue1, middleValue2, highIndex)
-  Initialize combinedArrays with the same length as arrayData
-  Merge the arrays until reaching the end of either array
-  If the left array is empty, copy the remaining elements from the right array
-  If the right array is empty, copy the remaining elements from the left array
-  Copy values back into the original array
+mergeArrays(arrayData, lowIndex, middleValue1, middleValue2, highIndex);
+  Initialize combinedArrays with the same length as arrayData;
+  Merge the arrays until reaching the end of either array;
+  If the left array is empty, copy the remaining elements from the right array;
+  If the right array is empty, copy the remaining elements from the left array;
+  Copy values back into the original array;
   
 - Quick Sort Explanation:
 
