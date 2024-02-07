@@ -1,6 +1,6 @@
-## Algorithms HW 4: Mergesort & Quicksort
+# Algorithms HW 4: Mergesort & Quicksort
 
-# Details
+## Details
 1. Write in pseudo code a merge sort algorithm that works over an array. Comment to explain the algorithm.
   MergeSort(array, leftIndex, rightIndex) //This takes the Array & indexs
     if leftIndex < rightIndex
