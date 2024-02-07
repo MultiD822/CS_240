@@ -4,7 +4,7 @@ through comments, comparing their time complexities in best, average, and worst-
 
 ## Details
 
-### Merge Sort Explanation:
+- Merge Sort Explanation:
 
 - Merge Sort in Programming Language:
 ```plaintext
