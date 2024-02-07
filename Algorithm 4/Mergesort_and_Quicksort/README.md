@@ -11,5 +11,7 @@ This assignment focuses on implementing and understanding two popular sorting al
 - Quick Sort in Programming Language:
 
 - Time Complexity Comparison:
-
+  How do the best, average and worst case time complexities compare between these two algorithms?
+  
 - Verification of Sort Algorithms 
+  Use the uploaded file to verify your sort algorithms are working. numbers-4.txt Download numbers-4.txt  What is the position of 90262? What is the position of 11559?
