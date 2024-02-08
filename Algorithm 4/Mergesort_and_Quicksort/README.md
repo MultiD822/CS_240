@@ -50,10 +50,9 @@ PartitionSort(arrayData, startingIndex, endIndex)
 
 - Time Complexity Comparison:
   How do the best, average and worst case time complexities compare between these two algorithms?
-```plaintext
+
 Merge Sort: Best Case: O(n log n), Average Case: O(n log n), Worst Case: O(n log n)
 Quick Sort: Best Case: O(n log n), Average Case: O(n log n), Worst Case: O(n^2)
-```
 Both algorithms have the same time complexity of O(n log n) in the best and average cases. However, in the worst case of Quick Sort, the time complexity can degrade into O(n^2) while Merge Sort maintains a time complexity of O(n log n).
 The worst case for Quick Sort occurs when the pivot chosen is the smallest or largest element within the array, leading to an unbalanced partition and adding more time complexity.
 - Verification of Sort Algorithms : 
