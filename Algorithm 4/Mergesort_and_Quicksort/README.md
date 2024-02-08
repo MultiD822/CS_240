@@ -25,9 +25,7 @@ mergeArrays(arrayData, lowIndex, middleValue1, middleValue2, highIndex)
   Copy values back into the original array
 ```
 - Merge Sort in Programming Language:
-```plaintext
- 
-```
+[reference](Mergesort_KS.java)
 - Quick Sort Explanation:
 ```plaintext
 QuickSort(arrayData, startingIndex, endIndex)
@@ -49,9 +47,7 @@ PartitionSort(arrayData, startingIndex, endIndex)
   return i
 ```
 - Quick Sort in Programming Language:
-```plaintext
-
-```
+[reference](Quicksort_KS.java)
 - Time Complexity Comparison:
   How do the best, average and worst case time complexities compare between these two algorithms?
 ```plaintext
