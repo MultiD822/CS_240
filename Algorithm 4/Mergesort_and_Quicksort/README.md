@@ -25,7 +25,7 @@ mergeArrays(arrayData, lowIndex, middleValue1, middleValue2, highIndex)
   Copy values back into the original array
 ```
 - Merge Sort in Programming Language:
-[reference](Mergesort_KS.java)
+[Mergesort_KS.java](Mergesort_KS.java)
 - Quick Sort Explanation:
 ```plaintext
 QuickSort(arrayData, startingIndex, endIndex)
