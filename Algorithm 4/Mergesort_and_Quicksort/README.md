@@ -55,8 +55,8 @@ Both algorithms have the same time complexity of O(n log n) in the best and aver
 The worst case for Quick Sort occurs when the pivot chosen is the smallest or largest element within the array, leading to an unbalanced partition and adding more time complexity.
 ## Verification of Sort Algorithms : 
 Use the uploaded file to verify your sort algorithms are working. numbers-4.txt.
-What is the position of 90262? 
-What is the position of 11559?
+- What is the position of 90262? 
+- What is the position of 11559?
 ```
 The Value 90262 is at Index 3608 when using either Quick Sort or Merge sort.
 The Value 11559 is not in the Array at all; it is missing from the numbers file. 
