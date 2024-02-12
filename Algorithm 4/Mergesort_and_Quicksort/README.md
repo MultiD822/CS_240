@@ -4,7 +4,7 @@ through comments, comparing their time complexities in best, average, and worst-
 
 ## Details
 
-- Merge Sort Explanation:
+## Merge Sort Explanation:
 ```plaintext
 MergeSort(array)
   Call sortArray(array, 0, array.length - 1)
@@ -24,11 +24,7 @@ mergeArrays(arrayData, lowIndex, middleValue1, middleValue2, highIndex)
   If the right array is empty, copy the remaining elements from the left array
   Copy values back into the original array
 ```
-- Merge Sort in Programming Language:
-```plaintext
- 
-```
-- Quick Sort Explanation:
+## Quick Sort Explanation:
 ```plaintext
 QuickSort(arrayData, startingIndex, endIndex)
   if endIndex <= startingIndex
@@ -48,16 +44,20 @@ PartitionSort(arrayData, startingIndex, endIndex)
   swap arrayData[i] and arrayData[endIndex]
   return i
 ```
-- Quick Sort in Programming Language:
-```plaintext
 
+## Time Complexity Comparison:
+  How do the best, average, and worst-case time complexities compare between these two algorithms?
 ```
-- Time Complexity Comparison:
-  How do the best, average and worst case time complexities compare between these two algorithms?
-```plaintext
-
+-Merge Sort: Best Case: O(n log n), Average Case: O(n log n), Worst Case: O(n log n)
+-Quick Sort: Best Case: O(n log n), Average Case: O(n log n), Worst Case: O(n^2)
 ```
-- Verification of Sort Algorithms : 
-```plaintext
-
+Both algorithms have the same time complexity of O(n log n) in the best and average cases. However, in the worst case of Quick Sort, the time complexity can degrade into O(n^2) while Merge Sort maintains a time complexity of O(n log n).
+The worst case for Quick Sort occurs when the pivot chosen is the smallest or largest element within the array, leading to an unbalanced partition and adding more time complexity.
+## Verification of Sort Algorithms : 
+Use the uploaded file to verify your sort algorithms are working. numbers-4.txt.
+- What is the position of 90262? 
+- What is the position of 11559?
+```
+The Value 90262 is at Index 3608 when using either Quick Sort or Merge sort.
+The Value 11559 is not in the Array at all; it is missing from the numbers file. 
 ```
