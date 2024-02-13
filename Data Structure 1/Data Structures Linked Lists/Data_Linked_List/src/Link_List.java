@@ -14,7 +14,7 @@ public class Link_List<E extends Comparable<E>> {
 /*We need to have a head node that tells the computer here is the starting address that then
  * points to the data node.
 */
-    private Node<E> headNode;
+    public Node<E> headNode;
 
     private Node<E> lastNode;
 
@@ -178,4 +178,6 @@ public class Link_List<E extends Comparable<E>> {
         node1.data = node2.data;
         node2.data = tempNode;
      }
+
+     
 }

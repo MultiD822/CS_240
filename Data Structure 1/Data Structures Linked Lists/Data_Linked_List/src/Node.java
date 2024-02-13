@@ -20,6 +20,9 @@ public class Node<E> {
         pointerNode = addressNode;
     }
 
+    public Node<E> nextNode(){
+        return this.pointerNode;
+    }
     
     public E getData() {
         return data;

@@ -152,7 +152,7 @@ public class Main {
     public static int numSelect(){
         Scanner terminalScanner = new Scanner(System.in);
         int numchooise = terminalScanner.nextInt();
-        
+        terminalScanner.close();
         return numchooise;
     }
     
