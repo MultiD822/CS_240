@@ -1,3 +1,12 @@
+/*
+Programmer: Kai Schenkel
+Class: CS 240
+Data: 2/13/2024
+Data Strutures 3: Hash functions
+File Name: Main.java
+Sources: Deitel, Deitel Book, small bit of chatGPT for error handleing, plus the file from Algorithms 5 Hash functions
+    the class file is called KL_
+*/
 public class Open_Hash_Table {
     private Entry[] table;
     private KS_Hash_Functions hash_Functions;

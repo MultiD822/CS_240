@@ -2,9 +2,8 @@
 Programmer: Kai Schenkel
 Class: CS 240
 Data: 1/16/2024
-Data Structures HW 1: Linked Lists
 File Name: Link_List.java
-Sources: Geeks for Geeks webpage and Deitel, Deitel Book
+Sources: Geeks for Geeks webpage and Deitel, Deitel Book from Data Structures HW 1: Linked Lists
 */
 
 import java.util.NoSuchElementException;
