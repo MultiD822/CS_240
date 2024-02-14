@@ -21,29 +21,43 @@ public class Main {
             String userInput = tremminalScanner.nextLine();
             switch (userInput.charAt(0)) {
                 case 'n':
-                    System.out.printf("Please enter a the hash value: ");
+                    System.out.printf("[]=============================================[]\n");
+                    System.out.printf("[] Please enter a the hash value: ");
+                    System.out.printf("[]=============================================[]\n");
                     int findPrime = tremminalScanner.nextInt();
                     int primeFound = hashFunctions.nearestBigPrime(findPrime);
                     tremminalScanner.nextLine();
-                    System.out.printf("The next biggest Prime is %d\n", primeFound);
+                    System.out.printf("[]=============================================[]\n");
+                    System.out.printf("[] The next biggest Prime is %d\n", primeFound);
+                    System.out.printf("[]=============================================[]\n");
                     break;
                 
                 case 'h':
-                    System.out.println("Please enter a string to hash: ");
+                    System.out.printf("[]=============================================[]\n");
+                    System.out.printf("[] Please enter a string to hash: ");
                     String input = tremminalScanner.nextLine();
+                    System.out.printf("[]=============================================[]\n");
                     int hash = hashFunctions.hashFactory(input, base, capacity);
-                    System.out.println("The hash of " + input + " is " + hash);
+                    System.out.printf("[]=============================================[]\n");
+                    System.out.printf("[]The hash of %s is eqaul to %d\n", input, hash);
+                    System.out.printf("[]=============================================[]\n");
                     break; 
                 
                 case 'p':
-                System.out.printf("Please enter a the hash value: ");
+                System.out.printf("[]==============================================[]\n");
+                System.out.printf("[] Please enter a value to see if it is Prime: ");
                 int primeInput = tremminalScanner.nextInt();
+                System.out.printf("[]==============================================[]\n");
                 boolean testedPrime = hashFunctions.isHashPrime(primeInput);
                 tremminalScanner.nextLine();
                     if (testedPrime == true){
-                        System.out.printf("The hash value is a Prime number\n");
+                        System.out.printf("[]==================================[]\n");
+                        System.out.printf("[] The hash value is a Prime number []\n");
+                        System.out.printf("[]==================================[]\n");
                     } else {
-                        System.out.printf("The hash value is not a Prime number\n");
+                        System.out.printf("[]======================================[]\n");
+                        System.out.printf("[] The hash value is not a Prime number []\n");
+                        System.out.printf("[]======================================[]\n");
                     }
                     break;
                 case 'q':
@@ -51,7 +65,9 @@ public class Main {
                     break;
 
                 default:
-                    System.out.printf("That Seems to do Nothing... Weird\n");
+                    System.out.printf("[]======================================[]\n");
+                    System.out.printf("[]That Seems to do Nothing... Weird     []\n");
+                    System.out.printf("[]======================================[]\n");
                     break;
             }
         }
@@ -59,10 +75,14 @@ public class Main {
     }
     
     public static void printMenu(){
-        System.out.println("Please enter a command: ");
-        System.out.println("n: Nerst Big Prime");
-        System.out.println("h: Test Hash Function");
-        System.out.println("p: Check if Prime");
-        System.out.println("q: Quit");
+        System.out.printf("[]==========================================[]\n");
+        System.out.printf("[] The Base is set to 63                    []\n");
+        System.out.printf("[] The Capacity is set to Integer.MAX_VALUE []\n");
+        System.out.printf("[] Please enter a command:                  []\n");
+        System.out.printf("[] n: Nerst Big Prime                       []\n");
+        System.out.printf("[] h: Test Hash Function                    []\n");
+        System.out.printf("[] p: Check if Prime                        []\n");
+        System.out.printf("[] q: Quit                                  []\n");
+        System.out.printf("[]==========================================[]\n");
     }
 }
