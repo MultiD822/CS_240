@@ -10,75 +10,93 @@ Sources: Deitel, Deitel Book, small bit of chatGPT for error handleing, plus the
 
 
 //This is the Binary Tree class
-public class Binary_Tree {
-     Node rootNode;
 
-    public Binary_Tree(Node root) {
+
+
+public class Binary_Tree<E> {
+     Tree_Node<Integer> rootNode;
+
+    public Binary_Tree(Tree_Node<Integer> root) {
         this.rootNode = root;
     }
 
-    public void add(Node node) {
-        if (this.rootNode == null) {
-            this.rootNode = node;
+    //Add a node to the tree
+    public void addNode(int value) {
+        if (rootNode == null) {
+            rootNode = new Tree_Node<Integer>(value);
         } else {
-            this.addExisting(node, this.rootNode);
+            rootNode.addNode(value);
         }
     }
 
-    private void addExisting(Node node, Node current) {
-        if (node.value > current.value) {
-            if (current.right == null) {
-                current.right = node;
-            } else {
-                addExisting(node, current.right);
-            }
-        } else if (node.value < current.value) {
-            if (current.left == null) {
-                current.left = node;
-            } else {
-                addExisting(node, current.left);
-            }
+    //Delete from the tree  
+    public Tree_Node<Integer> removeNode(Tree_Node<Integer> root, int value) {
+        if (root == null) {
+            return root;
         }
-    }
-    //Delete a node
-    public void delete(int value) {
-        this.rootNode = deleteNode(this.rootNode, value);
+        if (value < root.data_OR_Value) {
+            root.leftNode = removeNode(root.leftNode, value);
+        } else if (value > root.data_OR_Value) {
+            root.rightNode = removeNode(root.rightNode, value);
+        } else {
+            if (root.leftNode == null) {
+                return root.rightNode;
+            } else if (root.rightNode == null) {
+                return root.leftNode;
+            }
+            root.data_OR_Value = minValue(root.rightNode).data_OR_Value;
+            root.rightNode = removeNode(root.rightNode, root.data_OR_Value);
+        }
+        return root;
     }
     //In-order traversal
-    public void inOrder(Node node) {
+    public void inOrder(Tree_Node<Integer> node) {
         if (node != null) {
-            inOrder(node.left);
-            System.out.print(node.value + " ");
-            inOrder(node.right);
+            inOrder(node.leftNode);
+            System.out.printf(" ( %d )->",node.data_OR_Value);
+            inOrder(node.rightNode);
         }
+        
     }
     //Post-order traversal
-    public void postOrder(Node node) {
+    public void postOrder(Tree_Node<Integer> node) {
         if (node != null) {
-            postOrder(node.left);
-            postOrder(node.right);
-            System.out.print(node.value + " ");
+            postOrder(node.leftNode);
+            postOrder(node.rightNode);
+            System.out.printf(" ( %d )->",node.data_OR_Value);
         }
+        if (node == null){System.out.println();}
     }
     //Pre-order traversal
-    public void preOrder(Node node) {
+    public void preOrder(Tree_Node<Integer> node) {
         if (node != null) {
-            System.out.print(node.value + " ");
-            preOrder(node.left);
-            preOrder(node.right);
+            System.out.printf(" ( %d )->", node.data_OR_Value);
+            preOrder(node.leftNode);
+            preOrder(node.rightNode);
+        }
+        if (node == null){System.out.println();}
+    }
+    //search for a node
+    public void search(Tree_Node<Integer> node, int value) {
+        if (node == null) {
+            System.out.println("The value " + value + " was not found in the tree");
+        } else if (node.data_OR_Value == value) {
+            System.out.println("The value " + value + " was found in the tree");
+        } else if (value < node.data_OR_Value) {
+            search(node.leftNode, value);
+        } else {
+            search(node.rightNode, value);
         }
     }
-}    
-//My own Node class
-class Node {
-    int value;
-    Node left;
-    Node right;
 
-    public Node(int value) {
-        this.value = value;
-        this.left = null;
-        this.right = null;
+    private Tree_Node<Integer> minValue(Tree_Node<Integer> root) {
+        while (root.leftNode != null) {
+            root = root.leftNode;
+        }
+        return root;
     }
-}
+
+
+}    
+
 
