@@ -103,7 +103,7 @@ public class App {
         System.out.println("[] 'p' Pre-order traversal                        []");
         System.out.println("[] 'i' in-order traversal                         []");
         System.out.println("[] 'o' Post-order traversal                       []");
-        System.out.println("[] 'l' Print the Binary Tree                      []");
+        System.out.println("[] 'l' Print the Binary Tree in 2D                []");
         System.out.println("[] 'q' Exit the program                           []");
         System.out.println("[]================================================[]");
     }
