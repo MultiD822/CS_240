@@ -6,6 +6,9 @@ Data Strutures 3: Hash functions
 File Name: Ks_Hash_Functions.java
 Sources: Deitel, Deitel Book, small bit of chatGPT for error handleing, GeekforGeeks website
 */
+
+package hashLibrary_KS;
+
 public class KS_Hash_Functions {
     //
     public int hashFactory(String input, int base, int capacity){

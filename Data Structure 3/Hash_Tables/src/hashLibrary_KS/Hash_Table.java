@@ -7,6 +7,10 @@ File Name: Hash_Table.java
 Sources: Deitel, Deitel Book, small bit of chatGPT for error handleing, plus the file from Algorithms 5 Hash functions
     the class file is called KS_Hash_Functions
 */
+package hashLibrary_KS;
+
+import hashLibrary_KS.KS_Hash_Functions;
+
 public class Hash_Table {
     private Link_List<String, Integer>[] table;
     private KS_Hash_Functions hash_Functions;

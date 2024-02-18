@@ -5,6 +5,8 @@ Data: 1/16/2024
 File Name: Node.java
 Sources: Geeks for Geeks webpage and Deitel, Deitel Book from Data Structures HW 1: Linked Lists
 */
+package hashLibrary_KS;
+
 public class Node<K, V> {
     K key;
     V value;

@@ -1,3 +1,4 @@
+package hashLibrary_KS;
 /*
 Programmer: Kai Schenkel
 Class: CS 240

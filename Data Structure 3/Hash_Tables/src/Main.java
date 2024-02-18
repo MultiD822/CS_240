@@ -9,6 +9,7 @@ Sources: Deitel, Deitel Book, small bit of chatGPT for error handleing, plus the
 */
 
 import java.util.Scanner;
+import hashLibrary_KS.Hash_Table;
 
 public class Main {
     public static void main(String[] args) throws Exception {
