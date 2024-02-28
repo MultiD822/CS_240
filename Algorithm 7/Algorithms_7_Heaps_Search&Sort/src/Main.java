@@ -64,7 +64,8 @@ public class Main {
         System.out.println("1. Insert Element (I)");
         System.out.println("2. Extract Max (E)");
         System.out.println("3. Print Heap (P)");
-        System.out.println("4. Quit (Q)");
+        System.out.println("4. Serch for Element (S)");
+        System.out.println("5. Quit (Q)");
         System.out.print("Select an option: ");
     }
 }
