@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 import java.util.PriorityQueue;
 
 public class Graph {
@@ -134,4 +136,56 @@ public class Graph {
             this.distance = distance;
         }
     }
+
+    public List<Integer> findPath(int startVertex, int endVertex) {
+    // Assuming `edges` is your adjacency list, `nVertices` is the number of vertices.
+    int nVertices = this.edges.length; // Or however you determine the number of vertices
+    int[] distance = new int[nVertices];
+    int[] parent = new int[nVertices];
+    boolean[] visited = new boolean[nVertices];
+    
+    // Initialize distances and parent indices
+    for (int i = 0; i < nVertices; i++) {
+        distance[i] = Integer.MAX_VALUE;
+        parent[i] = -1; // -1 indicates that a vertex's predecessor is unknown
+        visited[i] = false;
+    }
+    
+    distance[startVertex] = 0;
+    PriorityQueue<VertexDistancePair> pq = new PriorityQueue<>((v1, v2) -> v1.distance - v2.distance);
+    pq.add(new VertexDistancePair(startVertex, 0));
+    
+    while (!pq.isEmpty()) {
+        VertexDistancePair currentPair = pq.poll();
+        int currentVertex = currentPair.vertex;
+        
+        if (visited[currentVertex]) continue;
+        visited[currentVertex] = true;
+        
+        // If we reach the end vertex, we can stop the loop
+        if (currentVertex == endVertex) break;
+        
+        for (EdgeNode edge : edges[currentVertex]) {
+            if (!visited[edge.end_Point] && distance[currentVertex] + edge.weight_Edge < distance[edge.end_Point]) {
+                distance[edge.end_Point] = distance[currentVertex] + edge.weight_Edge;
+                parent[edge.end_Point] = currentVertex;
+                pq.add(new VertexDistancePair(edge.end_Point, distance[edge.end_Point]));
+            }
+        }
+    }
+
+    // Reconstruct the path from endVertex back to startVertex
+    List<Integer> path = new ArrayList<>();
+    for (int at = endVertex; at != -1; at = parent[at]) {
+        path.add(at);
+    }
+    Collections.reverse(path);
+    
+    // If the path starts with the startVertex, it's valid; otherwise, it's unreachable.
+    if (path.get(0) == startVertex) {
+        return path;
+    } else {
+        throw new RuntimeException("Path does not exist");
+    }
+}
 }

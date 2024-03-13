@@ -18,15 +18,9 @@ import java.awt.event.ActionListener;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        Graph myGraph = new Graph(100, false);
+        
         System.out.println("Hello, World!");
 
-        myGraph.add_Edge(5, 5, 2, false);
-        myGraph.add_Edge(6, 8, 4, false);
-        myGraph.add_Edge(5, 5, 8, false);
-        myGraph.add_Edge(1, 2, 1, false);
-
-        myGraph.printGraph();
         
         java.awt.EventQueue.invokeLater(() -> {
             The_Gird grid = new The_Gird(10, 10);
@@ -41,6 +35,7 @@ public class Main {
                 
                 @Override
                 public void actionPerformed(ActionEvent e) {
+                    grid.findAndVisualizePath(1, 2, 9, 9);
                     grid.update_Cell(row, col, Color.PINK);
                     
                     col++;

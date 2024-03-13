@@ -40,10 +40,27 @@ public class The_Gird extends JFrame {
             }
         }
         initializeGraph();
+        theGraph.printGraph();
+        theGraph.dijkstrasAlgorithm(y_Size);
     }
 
     private void initializeGraph() {
         theGraph = new Graph(grid_Size_X * grid_Size_Y, false);
+        for (int y = 0; y < grid_Size_Y; y++) {
+            for (int x = 0; x < grid_Size_X; x++) {
+                int currentIndex = y * grid_Size_X + x;
+                // Assuming a cost of 1 for simplicity; adjust as needed
+                // Add edge to the right neighbor
+                if (x + 1 < grid_Size_X) {
+                    theGraph.add_Edge(currentIndex, y * grid_Size_X + (x + 1), 1, false);
+                }
+                // Add edge to the bottom neighbor
+                if (y + 1 < grid_Size_Y) {
+                    theGraph.add_Edge(currentIndex, (y + 1) * grid_Size_X + x, 1, false);
+                }
+                // Add edges to left and top neighbors if needed, and check for bounds
+            }
+        }
     }
 
     public void update_Cell(int x, int y, Color newState){
@@ -72,4 +89,24 @@ public class The_Gird extends JFrame {
             update_Cell(x, y, Color.GREEN); // Or another color to indicate the path
         }
     }
+
+    public void findAndVisualizePath(int startX, int startY, int endX, int endY) {
+        // InitializeGraph and setup theGraph if not already done
+        initializeGraph(); // Call this if the graph isn't already initialized
+    
+        // Convert to vertex indices
+        int startVertex = startY * grid_Size_X + startX;
+        int endVertex = endY * grid_Size_X + endX;
+    
+        // You need to implement findPath method in Graph class or use existing pathfinding method
+        List<Integer> pathVertices = theGraph.findPath(startVertex, endVertex);
+    
+        // Visualize the path
+        for (int vertexIndex : pathVertices) {
+            int x = vertexIndex % grid_Size_X;
+            int y = vertexIndex / grid_Size_X;
+            update_Cell(x, y, Color.GREEN); // Assuming update_Cell method updates the color of the cell
+        }
+    }
+    
 }
